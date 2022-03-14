@@ -66,13 +66,12 @@ gui.config(bg="black")
 gui.iconbitmap(default=u'assets/img/glove.ico')
 
 pyglet.font.add_file(u'assets/fonts/DS-DIGIT.TTF')
-
 label = Label(gui, font=('DS-Digital Bold Italic', 96), bg="black", fg="#ED302B")
 label.pack(expand=True)
 
 # TODO: Implement accelerometer --> calculate score based on accelerometer (velocity=distance/time)
 count = 0
-score = 957
+score = getScore()
 print("Socre:\t", score)
 
 # Just for debugging
