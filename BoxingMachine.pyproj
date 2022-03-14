@@ -34,9 +34,15 @@
     <InterpreterReference Include="Global|PythonCore|3.9" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\img\logo.png" />
+    <Content Include="assets\sounds\count_score.wav" />
+    <Content Include="assets\sounds\jackpot.wav" />
     <Content Include="useful\websites.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="assets\" />
+    <Folder Include="assets\img\" />
+    <Folder Include="assets\sounds\" />
     <Folder Include="useful\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
