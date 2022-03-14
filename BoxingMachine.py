@@ -3,6 +3,9 @@ import time
 from datetime import datetime
 import winsound
 
+# temporary
+import random
+
 # imports for microchip
 #import board
 #import busio
@@ -43,23 +46,25 @@ def playsound(path):
 def stopsound():
 	winsound.PlaySound(None, winsound.SND_PURGE)
 
+def getScore():
+	# TODO: Read accelerometer and calculate Score
+	return random.randrange(1,999)
+
 gui = Tk() 
-gui.geometry("700x700")
+gui.title("Boxing Machine GUI")
+gui.geometry("350x700") # unnecessary when using fullscreen
 gui.config(bg="black") 
 #gui.attributes('-fullscreen',True) # Maximize window
 #gui.overrideredirect(True) # Make window borderless
 
 label = Label(gui, font=('bahnschrift', 72), bg="black", fg="#ED302B")
-label.anchor('center')
-label.pack()
+label.pack(expand=True)
 
 # TODO: Implement accelerometer --> calculate score based on accelerometer (velocity=distance/time)
-score = 972
 count = 0
+score = getScore()
+print("Socre:\t", score)
 
-if score > 999:
-	score = 999
-	
 # Just for debugging
 start = datetime.now()
 print("Start:\t", start)
