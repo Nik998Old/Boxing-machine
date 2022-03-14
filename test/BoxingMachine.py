@@ -58,6 +58,7 @@ def playSound(score):
 	voice.play(sound)
 
 	while voice.get_busy():
+		time.sleep(0.000000000000005)
 		pass
 
 	sound = pygame.mixer.Sound(u"assets/sounds/songs/scatman.wav")
