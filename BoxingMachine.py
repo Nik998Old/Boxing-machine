@@ -69,7 +69,7 @@ print("Socre:\t", score)
 start = datetime.now()
 print("Start:\t", start)
 
-playsound(u"sounds/count_score.wav")
+playsound(u"assets/sounds/count_score.wav")
 
 while count < score:
 	count += 1
@@ -88,7 +88,7 @@ while count < score:
 	pass
 
 # TODO: Play different sounds --> low score: "You can do better" / high score: "wooow!"
-playsound(u"sounds/jackpot.wav")
+playsound(u"assets/sounds/jackpot.wav")
 
 # Just for debugging
 end = datetime.now()
