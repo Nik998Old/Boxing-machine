@@ -70,8 +70,7 @@ gui.config(bg="black")
 #gui.attributes('-fullscreen',True) # Maximize window
 #gui.overrideredirect(True) # Make window borderless
 
-icon = PhotoImage(file=u'assets/img/logo.png')
-gui.iconphoto(TRUE,icon)
+gui.iconbitmap(u'assets/img/glove.ico', u'assets/img/glove.ico')
 
 label = Label(gui, font=('bahnschrift', 72), bg="black", fg="#ED302B")
 label.pack(expand=True)
