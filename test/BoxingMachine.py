@@ -69,7 +69,7 @@ label.pack(expand=True)
 
 # TODO: Implement accelerometer --> calculate score based on accelerometer (velocity=distance/time)
 count = 0
-score = getScore()
+score = getSocre()
 print("Socre:\t", score)
 
 # Just for debugging
