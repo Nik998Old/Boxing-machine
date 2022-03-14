@@ -5,7 +5,7 @@
     <ProjectGuid>3a1d0cf9-c277-41c4-9e1e-9473d41e7669</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>BoxingMachine.py</StartupFile>
+    <StartupFile>test\BoxingMachine.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -29,6 +29,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="BoxingMachine.py" />
+    <Compile Include="test\BoxingMachine.py" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.9" />
@@ -40,7 +41,31 @@
     <Content Include="assets\sounds\count_score.wav">
       <Publish>True</Publish>
     </Content>
+    <Content Include="assets\sounds\dog_water.wav">
+      <Publish>True</Publish>
+    </Content>
     <Content Include="assets\sounds\jackpot.wav">
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="assets\sounds\move_bitch.wav">
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="assets\sounds\songs\scatman.wav">
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="assets\sounds\sorry_noob.wav">
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="assets\sounds\step_bro_im_stuck.wav">
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="assets\sounds\wow_oh_wow.wav">
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="assets\sounds\you_naughty.wav">
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="assets\sounds\you_suck.wav">
       <Publish>True</Publish>
     </Content>
     <Content Include="assets\useful\websites.txt" />
@@ -49,7 +74,9 @@
     <Folder Include="assets\" />
     <Folder Include="assets\img\" />
     <Folder Include="assets\sounds\" />
+    <Folder Include="assets\sounds\songs\" />
     <Folder Include="assets\useful\" />
+    <Folder Include="test\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

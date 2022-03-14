@@ -1,15 +1,9 @@
 from tkinter import*
-import time
 from datetime import datetime
-import winsound
-
-# temporary
+import time
+import threading
+import pygame
 import random
-
-# imports for microchip
-#import board
-#import busio
-#import adafruit_adxl34x
 
 def getSleepTime(dif):
 	retVal = 0
@@ -36,26 +30,32 @@ def getSleepTime(dif):
 		retVal = 0.05
 
 	elif dif <= 50:
-		retVal = 0.04
+		retVal = 0.02
 
 	return retVal
-
-def playsound(path):
-	winsound.PlaySound(path,winsound.SND_ASYNC)
-
-def stopsound():
-	winsound.PlaySound(None, winsound.SND_PURGE)
 
 def getScore():
 	# TODO: Read accelerometer and calculate Score
 	return random.randrange(1,999)
 
+def playSound(score):
+	# TODO: play different sounds based on score
+	sound = pygame.mixer.Sound(u"assets/sounds/you_suck.wav")
+	voice.play(sound)
+
+	while voice.get_busy():
+		pass
+
+	sound = pygame.mixer.Sound(u"assets/sounds/songs/scatman.wav")
+	voice.play(sound)
+
+icon = pygame.image.load(u"assets/img/Logo.png")
+pygame.display.set_icon(icon)
+
 gui = Tk() 
 gui.title("Boxing Machine GUI")
-gui.geometry("350x700") # unnecessary when using fullscreen
+gui.geometry("350x700") 
 gui.config(bg="black") 
-#gui.attributes('-fullscreen',True) # Maximize window
-#gui.overrideredirect(True) # Make window borderless
 
 label = Label(gui, font=('bahnschrift', 72), bg="black", fg="#ED302B")
 label.pack(expand=True)
@@ -69,7 +69,12 @@ print("Socre:\t", score)
 start = datetime.now()
 print("Start:\t", start)
 
-playsound(u"assets/sounds/count_score.wav")
+pygame.mixer.init()
+pygame.mixer.set_num_channels(8)
+voice = pygame.mixer.Channel(5)
+
+sound = pygame.mixer.Sound(u"assets/sounds/count_score.wav")
+voice.play(sound)
 
 while count < score:
 	count += 1
@@ -87,8 +92,7 @@ while count < score:
 		time.sleep(sleep)
 	pass
 
-# TODO: Play different sounds --> low score: "You can do better" / high score: "wooow!"
-playsound(u"assets/sounds/jackpot.wav")
+playSound(score)
 
 # Just for debugging
 end = datetime.now()
