@@ -39,38 +39,39 @@ def getScore():
 
 def playSound(score):
 	# TODO: play different sounds based on score
-	sound = pygame.mixer.Sound(u"assets/sounds/you_suck.wav")
+	sound = pygame.mixer.Sound(u'assets/sounds/you_suck.wav')
 	voice.play(sound)
 
+	# TODO: find better way to wait for completion 
 	while voice.get_busy():
 		time.sleep(0.000000000000005)
 		pass
 
-	sound = pygame.mixer.Sound(u"assets/sounds/songs/scatman.wav")
+	sound = pygame.mixer.Sound(u'assets/sounds/songs/scatman.wav')
 	voice.play(sound)
 
 gui = Tk() 
-gui.title("Boxing Machine GUI")
-gui.geometry("350x700")
-gui.config(bg="black") 
+gui.title('Boxing Machine GUI')
+gui.geometry('350x700')
+gui.config(bg='black') 
 gui.iconbitmap(default=u'assets/img/glove.ico')
 
-label = Label(gui, font=('bahnschrift', 72), bg="black", fg="#ED302B")
+label = Label(gui, font=('bahnschrift', 72), bg='black', fg='#ED302B')
 label.pack(expand=True)
 
 count = 0
 score = getScore()
-print("Socre:\t", score)
+print('Socre:\t', score)
 
 # Just for debugging
 start = datetime.now()
-print("Start:\t", start)
+print('Start:\t', start)
 
 pygame.mixer.init()
 pygame.mixer.set_num_channels(8)
 voice = pygame.mixer.Channel(5)
 
-sound = pygame.mixer.Sound(u"assets/sounds/count_score.wav")
+sound = pygame.mixer.Sound(u'assets/sounds/count_score.wav')
 voice.play(sound)
 
 while count < score:
@@ -94,7 +95,7 @@ playSound(score)
 # Just for debugging
 end = datetime.now()
 delta = end - start
-print("End:\t", end)
-print("Delta:\t", delta.total_seconds() * 1000, " milliseconds")
+print('End:\t', end)
+print('Delta:\t', delta.total_seconds() * 1000, ' milliseconds')
 
 gui.mainloop()
