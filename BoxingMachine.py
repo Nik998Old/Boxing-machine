@@ -1,7 +1,6 @@
 from tkinter import*
 from datetime import datetime
 import time
-import threading
 import pygame
 import random
 
@@ -44,18 +43,17 @@ def playSound(score):
 	voice.play(sound)
 
 	while voice.get_busy():
+		time.sleep(0.000000000000005)
 		pass
 
 	sound = pygame.mixer.Sound(u"assets/sounds/songs/scatman.wav")
 	voice.play(sound)
 
-icon = pygame.image.load(u"assets/img/Logo.png")
-pygame.display.set_icon(icon)
-
 gui = Tk() 
 gui.title("Boxing Machine GUI")
-gui.geometry("350x700") 
+gui.geometry("350x700")
 gui.config(bg="black") 
+gui.iconbitmap(default=u'assets/img/glove.ico')
 
 label = Label(gui, font=('bahnschrift', 72), bg="black", fg="#ED302B")
 label.pack(expand=True)
