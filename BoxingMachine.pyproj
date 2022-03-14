@@ -13,7 +13,7 @@
     <Name>BoxingMachine</Name>
     <RootNamespace>GUI-Test</RootNamespace>
     <TestFramework>none</TestFramework>
-    <IsWindowsApplication>True</IsWindowsApplication>
+    <IsWindowsApplication>False</IsWindowsApplication>
     <PublishUrl>D:\Microsoft Visual Studio\source\repos\BoxingMachine\publish</PublishUrl>
     <UnitTestPattern>test*.py</UnitTestPattern>
     <UnitTestRootDirectory>.</UnitTestRootDirectory>
