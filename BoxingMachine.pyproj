@@ -14,7 +14,7 @@
     <RootNamespace>GUI-Test</RootNamespace>
     <TestFramework>none</TestFramework>
     <IsWindowsApplication>True</IsWindowsApplication>
-    <PublishUrl>D:\Microsoft Visual Studio\source\repos\00 - Test\Python\GUI-Test\publish</PublishUrl>
+    <PublishUrl>D:\Microsoft Visual Studio\source\repos\BoxingMachine\publish</PublishUrl>
     <UnitTestPattern>test*.py</UnitTestPattern>
     <UnitTestRootDirectory>.</UnitTestRootDirectory>
     <InterpreterId>Global|PythonCore|3.9</InterpreterId>
