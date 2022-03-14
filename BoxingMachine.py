@@ -34,7 +34,7 @@ def getSleepTime(dif):
 	return retVal
 
 def getScore():
-	# TODO: Read accelerometer and calculate Score
+	# TODO: Read accelerometer and calculate Score (velocity=distance/time)
 	return random.randrange(1,999)
 
 def playSound(score):
@@ -58,7 +58,6 @@ gui.iconbitmap(default=u'assets/img/glove.ico')
 label = Label(gui, font=('bahnschrift', 72), bg="black", fg="#ED302B")
 label.pack(expand=True)
 
-# TODO: Implement accelerometer --> calculate score based on accelerometer (velocity=distance/time)
 count = 0
 score = getScore()
 print("Socre:\t", score)

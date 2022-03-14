@@ -2,6 +2,7 @@ from tkinter import*
 from datetime import datetime
 import time
 import pygame
+import pyglet
 
 # temporary
 import random
@@ -64,12 +65,14 @@ gui.config(bg="black")
 #gui.overrideredirect(True) # Make window borderless
 gui.iconbitmap(default=u'assets/img/glove.ico')
 
-label = Label(gui, font=('bahnschrift', 72), bg="black", fg="#ED302B")
+pyglet.font.add_file(u'assets/fonts/DS-DIGIT.TTF')
+
+label = Label(gui, font=('DS-Digital Bold Italic', 96), bg="black", fg="#ED302B")
 label.pack(expand=True)
 
 # TODO: Implement accelerometer --> calculate score based on accelerometer (velocity=distance/time)
 count = 0
-score = getSocre()
+score = 957
 print("Socre:\t", score)
 
 # Just for debugging
@@ -79,7 +82,6 @@ print("Start:\t", start)
 pygame.mixer.init()
 pygame.mixer.set_num_channels(8)
 voice = pygame.mixer.Channel(5)
-
 sound = pygame.mixer.Sound(u"assets/sounds/count_score.wav")
 voice.play(sound)
 
@@ -90,7 +92,7 @@ while count < score:
 	if score-count > 50:
 		if count % 2 == 0:
 			# TODO: check how many deimal places time.sleep can handle
-			time.sleep(0.000000000000005)
+			time.sleep(0.01)
 			gui.update()
 	else:
 		gui.update()
@@ -99,12 +101,18 @@ while count < score:
 		time.sleep(sleep)
 	pass
 
+# Just for debugging
+end1 = datetime.now()
+delta = end1 - start
+print("End 1:\t", end1)
+print("Delta:\t", delta.total_seconds() * 1000, " milliseconds")
+
 playSound(score)
 
 # Just for debugging
-end = datetime.now()
-delta = end - start
-print("End:\t", end)
+end2 = datetime.now()
+delta = end2 - start
+print("End 2:\t", end2)
 print("Delta:\t", delta.total_seconds() * 1000, " milliseconds")
 
 gui.mainloop()

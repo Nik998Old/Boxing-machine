@@ -35,6 +35,9 @@
     <InterpreterReference Include="Global|PythonCore|3.9" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\fonts\DS-DIGIT.TTF">
+      <Publish>True</Publish>
+    </Content>
     <Content Include="assets\img\glove.ico">
       <Publish>True</Publish>
     </Content>
@@ -78,6 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="assets\" />
+    <Folder Include="assets\fonts\" />
     <Folder Include="assets\img\" />
     <Folder Include="assets\sounds\" />
     <Folder Include="assets\sounds\songs\" />
