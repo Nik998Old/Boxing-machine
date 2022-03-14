@@ -1,8 +1,6 @@
 from tkinter import*
-import time
 from datetime import datetime
-import winsound
-import threading
+import time
 import pygame
 
 # temporary
@@ -42,12 +40,6 @@ def getSleepTime(dif):
 
 	return retVal
 
-def playsound(path):
-	winsound.PlaySound(path,winsound.SND_ASYNC)
-
-def stopsound():
-	winsound.PlaySound(None, winsound.SND_PURGE)
-
 def getScore():
 	# TODO: Read accelerometer and calculate Score
 	return random.randrange(1,999)
@@ -70,8 +62,7 @@ gui.geometry("350x700") # unnecessary when using fullscreen
 gui.config(bg="black") 
 #gui.attributes('-fullscreen',True) # Maximize window
 #gui.overrideredirect(True) # Make window borderless
-
-gui.iconbitmap(u'assets/img/glove.ico', u'assets/img/glove.ico')
+gui.iconbitmap(default=u'assets/img/glove.ico')
 
 label = Label(gui, font=('bahnschrift', 72), bg="black", fg="#ED302B")
 label.pack(expand=True)

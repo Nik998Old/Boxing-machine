@@ -35,6 +35,12 @@
     <InterpreterReference Include="Global|PythonCore|3.9" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\img\glove.ico">
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="assets\img\glove.jpg">
+      <Publish>True</Publish>
+    </Content>
     <Content Include="assets\img\logo.png">
       <Publish>True</Publish>
     </Content>
