@@ -1,6 +1,7 @@
 import RPi.GPIO as GPIO # Import Raspberry Pi GPIO library
 
 def button_callback(channel):
+    # TODO: play "Step bro I'm stuck" then let ball come down but only sometimes
     print("Button was pushed!")
 
 GPIO.setwarnings(False) # Ignore warning for now

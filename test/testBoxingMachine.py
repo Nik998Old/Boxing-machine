@@ -115,4 +115,6 @@ delta = end2 - start
 print('End 2:\t', end2)
 print('Delta:\t', delta.total_seconds() * 1000, ' milliseconds')
 
+# TODO: Get highscore from database and print it below the current score
+
 gui.mainloop()
