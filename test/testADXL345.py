@@ -1,5 +1,5 @@
 import time
-import board
+import board # error when no device found?
 import adafruit_adxl34x
 
 i2c = board.I2C()  # uses board.SCL and board.SDA
