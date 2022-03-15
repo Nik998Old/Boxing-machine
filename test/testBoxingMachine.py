@@ -50,6 +50,7 @@ def playSound(score):
 	sound = pygame.mixer.Sound(u'assets/sounds/you_suck.wav')
 	voice.play(sound)
 
+	# TODO: find better way to wait for completion
 	while voice.get_busy():
 		time.sleep(0.000000000000005)
 		pass

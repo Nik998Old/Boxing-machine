@@ -34,15 +34,12 @@ def getSleepTime(dif):
 	return retVal
 
 def getScore():
-	# TODO: Read accelerometer and calculate Score (velocity=distance/time)
 	return random.randrange(1,999)
 
 def playSound(score):
-	# TODO: play different sounds based on score
 	sound = pygame.mixer.Sound(u'assets/sounds/you_suck.wav')
 	voice.play(sound)
 
-	# TODO: find better way to wait for completion 
 	while voice.get_busy():
 		time.sleep(0.000000000000005)
 		pass
@@ -54,7 +51,6 @@ gui = Tk()
 gui.title('Boxing Machine GUI')
 gui.geometry('350x700')
 gui.config(bg='black') 
-gui.iconbitmap(default=u'assets/img/glove.ico')
 
 label = Label(gui, font=('bahnschrift', 72), bg='black', fg='#ED302B')
 label.pack(expand=True)
@@ -80,7 +76,6 @@ while count < score:
 	
 	if score-count > 50:
 		if count % 2 == 0:
-			# TODO: check how many deimal places time.sleep can handle
 			time.sleep(0.000000000000005)
 			gui.update()
 	else:
