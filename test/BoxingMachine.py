@@ -63,9 +63,9 @@ gui.geometry('350x700') # unnecessary when using fullscreen
 gui.config(bg='black') 
 #gui.attributes('-fullscreen',True) # Maximize window
 #gui.overrideredirect(True) # Make window borderless
-gui.iconbitmap(default=u'assets/img/glove.ico')
+gui.iconbitmap(default=u'assets/img/glove.ico') # doesn't work on Linux --> use png file
 
-pyglet.font.add_file(u'assets/fonts/DS-DIGIT.TTF')
+pyglet.font.add_file(u'assets/fonts/DS-DIGIT.TTF') # doesn't work on Linux
 label = Label(gui, font=('DS-Digital Bold Italic', 96), bg='black', fg='#ED302B')
 label.pack(expand=True)
 
