@@ -1,2 +1,3 @@
 https://pimylifeup.com/raspberry-pi-accelerometer-adxl345/
 https://tutorials-raspberrypi.de/rotation-und-beschleunigung-mit-dem-raspberry-pi-messen/
+https://raspberrypihq.com/use-a-push-button-with-raspberry-pi-gpio/
