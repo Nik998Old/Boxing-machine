@@ -6,31 +6,22 @@ import random
 
 def getSleepTime(dif):
 	retVal = 0
-	
 	if dif == 0:
 	  retVal = 1.2
-	  
 	if dif == 1:
 		retVal = 1
-
 	elif dif == 2:
 		retVal = 0.5
-
 	elif dif == 3:
 		retVal = 0.3
-	
 	elif dif < 5:
 		retVal = 0.25
-
 	elif dif < 20:
 		retVal = 0.1
-
 	elif dif < 25:
 		retVal = 0.05
-
 	elif dif <= 50:
 		retVal = 0.02
-
 	return retVal
 
 def getScore():
